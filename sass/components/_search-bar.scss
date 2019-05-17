@@ -1,0 +1,45 @@
+.search-bar{
+  flex:0 0 33%;
+  margin: 2rem;
+  position: relative;
+  display: flex;
+  @include respond (xxsmall){
+    order: 1;
+    flex-grow: 1;
+  }
+
+  &__input{
+    width: 90%;
+    background-color: var(--color-grey-light-4);
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    margin: 0 auto;
+    transition: $transition-default;
+    &:focus{
+      width: 100%;
+    }
+  }
+  &__input:focus ~ &__button{
+    transform: translateX(-3rem);
+
+  }
+  &__button{
+    // position: absolute;
+    // top: 2px;
+    // right: 5rem;
+    transform: translateX(-4rem);
+    background-color: var(--color-grey-light-4);
+    border: none;
+    outline: none;
+    transition: $transition-default;
+    border-radius: 100px;
+
+  }
+
+  &__icon{
+    height: 2rem;
+    width: 2rem;
+  }
+}
